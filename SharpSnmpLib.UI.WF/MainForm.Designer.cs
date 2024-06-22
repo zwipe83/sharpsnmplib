@@ -35,6 +35,9 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
+            btnBulkWalk = new Button();
+            lstBulkWalkResult = new ListView();
+            lblCount = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,7 +81,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1351, 24);
+            menuStrip1.Size = new Size(2544, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -94,11 +97,41 @@
             helpToolStripMenuItem.Size = new Size(44, 20);
             helpToolStripMenuItem.Text = "Help";
             // 
+            // btnBulkWalk
+            // 
+            btnBulkWalk.Location = new Point(12, 119);
+            btnBulkWalk.Name = "btnBulkWalk";
+            btnBulkWalk.Size = new Size(100, 23);
+            btnBulkWalk.TabIndex = 4;
+            btnBulkWalk.Text = "Bulk Walk";
+            btnBulkWalk.UseVisualStyleBackColor = true;
+            btnBulkWalk.Click += btnBulkWalk_Click;
+            // 
+            // lstBulkWalkResult
+            // 
+            lstBulkWalkResult.Location = new Point(12, 148);
+            lstBulkWalkResult.Name = "lstBulkWalkResult";
+            lstBulkWalkResult.Size = new Size(2520, 1201);
+            lstBulkWalkResult.TabIndex = 5;
+            lstBulkWalkResult.UseCompatibleStateImageBehavior = false;
+            // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Location = new Point(118, 123);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(38, 15);
+            lblCount.TabIndex = 6;
+            lblCount.Text = "label1";
+            // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1351, 450);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(2544, 1361);
+            Controls.Add(lblCount);
+            Controls.Add(lstBulkWalkResult);
+            Controls.Add(btnBulkWalk);
             Controls.Add(lblDescription);
             Controls.Add(txtPort);
             Controls.Add(txtIpAddress);
@@ -122,5 +155,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
+        private Button btnBulkWalk;
+        private ListView lstBulkWalkResult;
+        private Label lblCount;
     }
 }
